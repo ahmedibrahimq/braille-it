@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Braille It</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <style>
+  <!-- Reference: https://css-tricks.com/snippets/css/gradient-text/  -->
+  .orange-text{
+	background: -webkit-linear-gradient(-20deg, #ffa0ae 0%, #ffa04f 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  .orange{
+	background-image: -webkit-linear-gradient(-20deg, #ffa0ae 0%, #ffa04f 100%) !important
+  }
+  
+  textarea, textarea:focus {
+	border-bottom: none !important;
+	box-shadow: none !important
+  }
+  
+  label {
+	color: #e0c3fc !important
+  }
+  #braille-code {
+	font-size: 3em
+  }
+  </style>
+</head>
+<body>
+  <nav class="black" role="navigation"  style="background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">&#x2803&#x280a</a>
+      
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons;">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text"><span>&#x2803&#x280a</span><br>Braille It</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Type some text below and see what happens!</h5>
+      </div>
+	  
+	  <div class="row">
+		  <form class="col s12">
+			<div class="row card-panel">
+			  <div class="input-field col s12">
+				<textarea id="text-en" class="materialize-textarea" data-length="600"></textarea>
+				<label for="text-en">Type here in english</label>
+			  </div>
+			</div>
+			
+			<div class="row center">
+				<a id="braille-it" class="btn-large waves-effect waves-light orange">Braille It!</a>
+			</div>
+		  </form>
+		
+	  </div>
+	  
+	  <div class="row">
+		<h5 class="col s12 light">Braille: </h5>
+		<div id="braille-code" class="col s12 white z-depth-1 flow-text"><br></div>
+	  </div>
+	  
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Braille It</h5>
+          <p class="grey-text text-lighten-4"><br>English <=> braille translator<br>Ahmed Ibrahim Mahmoud<br>Section 1<br>NLP</p>
+
+
+        </div>
+		
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="https://github.com/ahmedibrahimq">Ahmed Ibrahim Mah.</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="braille.js"></script>
+
+  </body>
+</html>
